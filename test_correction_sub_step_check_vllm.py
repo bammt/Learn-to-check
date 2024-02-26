@@ -8,11 +8,11 @@ from vllm import SamplingParams, LLM
 import argparse
 from tqdm import tqdm
 import json
-model_path='llama2-13b'
-check_path='llama2-13b'
+model_path='llama2-13b' #the path of original llama2-13B
+check_path='llama2-13b' #replace the path with your fine-tuned ckpt
 max_new_tokens = 1024
-orignal_file  =  open("/cpfs/user/zhangche/BELLE-main/train/data/test.jsonl","r", encoding='UTF-8')
-output_file  =  open("/cpfs/user/zhangche/BELLE-main/train/src/gsm8k_correction_large_2775_225_sub_step_check_cot.txt","w", encoding='UTF-8')
+orignal_file  =  open("data/test/GSM8k_test","r", encoding='UTF-8')
+output_file  =  open("GSM8K_result.txt","w", encoding='UTF-8')
 data=[]
 
 while  True:
