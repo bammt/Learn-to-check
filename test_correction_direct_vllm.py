@@ -8,7 +8,8 @@ from vllm import SamplingParams, LLM
 import argparse
 from tqdm import tqdm
 import json
-check_path='llama-2-13b-hf'
+model_path='llama2-13b' #the path of original llama2-13B
+check_path='llama2-13b' #replace the path with your fine-tuned ckpt
 max_new_tokens = 1024
 orignal_file  =  open("test.jsonl","r", encoding='UTF-8')
 output_file  =  open("correction_direct.txt","w", encoding='UTF-8')
