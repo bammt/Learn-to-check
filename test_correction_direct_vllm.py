@@ -57,7 +57,7 @@ sampling_params_3 = SamplingParams(
     repetition_penalty=1.2,
     max_tokens=max_new_tokens
 )
-llm = LLM(model=check_path, tokenizer="/cpfs/shared/nlp/llama2/llama-2-13b-hf")
+llm = LLM(model=check_path, tokenizer=model_path)
 
 outputs = llm.generate(prompt, sampling_params_1)
 
